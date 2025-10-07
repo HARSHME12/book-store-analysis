@@ -8,7 +8,6 @@ It covers:
 • Data import from CSV files
 • Execution of simple & complex SQL queries for Business Intelligence (BI)
 
-## ______________________
 
 ## 🗄️ SQL Queries of BookstoreAnalysis
 
@@ -18,7 +17,6 @@ CREATE DATABASE BookstoreAnalysis;
 ### Switch to the Database
 \c BookstoreAnalysis;
 
-## ______________________
 
 ### 🔹 Create Tables
 
@@ -53,7 +51,6 @@ CREATE TABLE Orders(
      Total_Amount NUMERIC(10, 2)
      );
 
-## ______________________
 
 ### 🔹 Import Data into Books Table
 COPY Books(book_id, title, author, genre, published_year, price, stock)
@@ -70,7 +67,6 @@ COPY Orders(order_id, customer_id, book_id, order_date, quantity, total_amount)
 FROM 'C:\\sqlproject\\Orders.csv'
 CSV HEADER;
 
-## ______________________
 
 ## 📊 Basic SQL Queries
 
@@ -121,7 +117,6 @@ CSV HEADER;
             SUM (total_amount) AS total_revenue
         FROM Orders;
 
-## ______________________
 
 ## ⚙️ Advanced SQL Queries
 
@@ -202,7 +197,6 @@ CSV HEADER;
        GROUP BY b.book_id
        ORDER BY remaining_qty;
        
-## ______________________
 
 ## 📈 Reports Generated
   • 💰 Total Revenue Generated
@@ -212,7 +206,6 @@ CSV HEADER;
   • 📦 Inventory & Stock Management
   • 📉 Remaining Stock Analysis
 
-## ______________________
 
 ## 🧠 Conclusion
 This project enhances understanding of:
@@ -220,7 +213,6 @@ This project enhances understanding of:
   • Business Reporting
   • Decision-Making in Retail Environment
 
-## ______________________
 
 ## 🧰 Tech Stack
   Component     Description
@@ -228,7 +220,6 @@ This project enhances understanding of:
   Data Source   CSV Files (Books, Customers, Orders)
   Language      SQL
 
-## _______________________
 
 ## 👨‍💻 Author
 Harsh Kumar Verma
