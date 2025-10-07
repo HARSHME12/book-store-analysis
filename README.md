@@ -8,7 +8,7 @@ It covers:
 • Data import from CSV files
 • Execution of simple & complex SQL queries for Business Intelligence (BI)
 
-## ________________________________________
+## ______________________
 
 ## 🗄️ SQL Queries of BookstoreAnalysis
 
@@ -18,12 +18,12 @@ CREATE DATABASE BookstoreAnalysis;
 ### Switch to the Database
 \c BookstoreAnalysis;
 
-## ________________________________________
+## ______________________
 
 ### 🔹 Create Tables
 
 DROP TABLE IF EXISTS Books;
-CREATE TABLE Books (
+CREATE TABLE Books(
      Book_ID SERIAL PRIMARY KEY,
      Title VARCHAR(100),
      Author VARCHAR(100),
@@ -34,7 +34,7 @@ CREATE TABLE Books (
      );
 
 DROP TABLE IF EXISTS Customers;
-CREATE TABLE Customers (
+CREATE TABLE Customers(
      Customer_ID SERIAL PRIMARY KEY,
      Name VARCHAR(100),
      Email VARCHAR(100),
@@ -44,7 +44,7 @@ CREATE TABLE Customers (
      );
 
 DROP TABLE IF EXISTS Orders;
-CREATE TABLE Orders (
+CREATE TABLE Orders(
      Order_ID INT PRIMARY KEY,
      Customer_ID INT REFERENCES Customers(Customer_ID),
      Book_ID INT REFERENCES Books(Book_ID),
@@ -53,7 +53,7 @@ CREATE TABLE Orders (
      Total_Amount NUMERIC(10, 2)
      );
 
-## ________________________________________
+## ______________________
 
 ### 🔹 Import Data into Books Table
 COPY Books(book_id, title, author, genre, published_year, price, stock)
@@ -70,7 +70,7 @@ COPY Orders(order_id, customer_id, book_id, order_date, quantity, total_amount)
 FROM 'C:\\sqlproject\\Orders.csv'
 CSV HEADER;
 
-## ________________________________________
+## ______________________
 
 ## 📊 Basic SQL Queries
 
@@ -121,7 +121,7 @@ CSV HEADER;
             SUM (total_amount) AS total_revenue
         FROM Orders;
 
-## ________________________________________
+## ______________________
 
 ## ⚙️ Advanced SQL Queries
 
@@ -202,7 +202,7 @@ CSV HEADER;
        GROUP BY b.book_id
        ORDER BY remaining_qty;
        
-## ________________________________________
+## ______________________
 
 ## 📈 Reports Generated
   • 💰 Total Revenue Generated
@@ -212,7 +212,7 @@ CSV HEADER;
   • 📦 Inventory & Stock Management
   • 📉 Remaining Stock Analysis
 
-## ________________________________________
+## ______________________
 
 ## 🧠 Conclusion
 This project enhances understanding of:
@@ -220,7 +220,7 @@ This project enhances understanding of:
   • Business Reporting
   • Decision-Making in Retail Environment
 
-## ________________________________________
+## ______________________
 
 ## 🧰 Tech Stack
   Component     Description
@@ -228,7 +228,7 @@ This project enhances understanding of:
   Data Source   CSV Files (Books, Customers, Orders)
   Language      SQL
 
-## ________________________________________
+## _______________________
 
 ## 👨‍💻 Author
 Harsh Kumar Verma
